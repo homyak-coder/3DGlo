@@ -23,7 +23,7 @@ const validation = () => {
 
     formEmails.forEach((formEmail) => {
         formEmail.addEventListener("input", (e) => {
-            e.target.value = e.target.value.replace(/[^a-zA-Z\-\.\!\~\*\'\@\d]/g, "")
+            e.target.value = e.target.value.replace(/[^a-zA-Z\-\.\!\~\*\'\@\_\d]/g, "")
         })
     })
     formPhones.forEach((formPhone) => {
