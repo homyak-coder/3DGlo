@@ -3,10 +3,12 @@ import menu from "./modules/menu";
 import modal from "./modules/modal";
 import validation from "./modules/validation";
 import tabs from "./modules/tabs";
+import slider from "./modules/slider";
 
 
-timer("29 february 2022");
+timer("25 march 2022");
 menu();
 modal();
 validation();
-tabs()
+tabs();
+slider();
