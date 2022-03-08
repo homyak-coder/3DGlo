@@ -16,7 +16,7 @@ const validation = () => {
         arrayNameForm.push(formName, topForm)
         arrayNameForm.forEach((form) => {
             form.addEventListener("input", (e) => {
-                e.target.value = e.target.value.replace(/[^а-яА-Я\s\-]/g, "")
+                e.target.value = e.target.value.replace(/[^а-яА-Я\s]/g, "")
             })
         })
     })
@@ -28,11 +28,11 @@ const validation = () => {
     })
     formPhones.forEach((formPhone) => {
         formPhone.addEventListener("input", (e) => {
-            e.target.value = e.target.value.replace(/[^0-9\(\)\-]/g, "")
+            e.target.value = e.target.value.replace(/[^0-9\(\)\-\+]/g, "")
         })
     })
     topMess.addEventListener("input", (e) => {
-        e.target.value = e.target.value.replace(/[^а-яА-Я\s\-]/g, "")
+        e.target.value = e.target.value.replace(/[^\а-яА-Я\s\d\.\!\?\'\,\:\;\"\-]/g, "")
     })
     calc.forEach((calcItem) => {
         calcItem.addEventListener("input", (e) => {
