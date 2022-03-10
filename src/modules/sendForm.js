@@ -1,6 +1,7 @@
 const sendForm = ({formId, someElem = []}) => {
     const form = document.getElementById(formId);
     const statusBlock = document.createElement('div');
+    statusBlock.style.color = 'white'
     const loadText = 'Загрузка...'
     const errorText = 'Ошибка'
     const successText = 'Спасибо! Наш менеджер с нами свяжется!'
@@ -49,6 +50,7 @@ const sendForm = ({formId, someElem = []}) => {
             sendData(formBody)
                 .then(data => {
                     statusBlock.textContent = successText;
+                    setTimeout(() => statusBlock.remove(), 2000)
                     formElements.forEach(input => {
                         input.value = ''
                     })
